@@ -1,0 +1,67 @@
+div.text-container {
+    margin: 0 auto;
+    width: 75%;
+    font-family: "Trebuchet-MS";
+}
+
+.hideContent {
+    overflow: hidden;
+    line-height: 1em;
+    height: 2em;
+}
+
+.showContent {
+    line-height: 1em;
+    height: auto;
+}
+
+.showContent {
+    height: auto;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+p {
+    padding: 10px 0;
+}
+
+.show-more {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.hidden {
+    display: none!important;
+}
+
+/* -------------  CSS Loader  ----------- */
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgb(233, 241, 239)
+                url('http://paladin.co.ke/img/wait_loading.gif') 
+                50% 50% 
+                no-repeat;
+    animation:modal 4s linear infinite;
+    opacity: 0.5; /*opacity makes the modal transparent*/
+   }
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+.loading .modal {
+    display: block;
+}
+/* --------- CSS Loader End Here ------------*/
