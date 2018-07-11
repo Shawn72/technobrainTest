@@ -53,11 +53,8 @@
           <div ng-app="">
             <div class="wrap">
               <div>
-                <label style="font-weight:bold">Click here to view</label>&nbsp;
-                <form action="printToPDF.php" method="post" role="form">
-                  <input type="submit" value="Generate  Report" class="btn btn-primary"/>&nbsp;
-                  <a href="export2Xcel.php" class="btn btn-primary" role="button">View in Excel</a>
-                </form>
+                <label style="font-weight:bold">Click here to view</label>&nbsp;                
+                  <a href="export2Xcel.php" class="btn btn-primary" role="button">Generate Reports</a>                
               </div></br>
               <Label style="font-weight:bold">Customer wants to Talk?</label>
               
@@ -75,7 +72,7 @@
                     <input id="No" type="radio" name="content3" ng-model="content3" value="No"></input><label for="Yes">No</label>
               
                     <div ng-show="content3 =='Yes'">
-                      <label>Thank you Mr/Mrs/Ms Client Name</label>&nbsp;
+                      <label style="font-weight:bold">Thank you Mr/Mrs/Ms Client Name</label>&nbsp;
                       <label>Have you heard about our company, ABCF?</label>  
                         <div>   
                           <input id="YesI" type="radio" name="content8" ng-model="content8" value="YesI"><label for="first">Yes</label>
@@ -87,10 +84,25 @@
                         <form>
                           <div class="form-group">
                             <label style="font-weight:bold">Client Name:</label>
-                            <input type="text" name="nname" class="form-control" id="nYiname" placeholder="Enter Client Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <input type="text" name="nSname" class="form-control" id="nSname" placeholder="Enter Client Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                             <div class="validation"></div>
                             <div class="help-block with-errors"></div>
                           </div>
+                          <label style="font-weight:bold">What's your take on these ABC Services?</label>&nbsp;
+                          <input type="text" class="form-control" id="mytakeis" placeholder="clients thoughts"></br>
+                          
+                          <label style="font-weight:bold">With that Mr/Mrs.client name, do agree that your business data is extremely important for your business and needs back up? </label>
+                            <div>   
+                              <input id="IAgree" type="radio" name="content9" ng-model="content9" value="IAgree"><label for="first">IAgree</label>
+                                <br />              
+                              <input id="IDisagree" type="radio" name="content9" ng-model="content9" value="IDisagree"><label for="IDisagree">No</label>
+                            </div>
+                          <label style="font-weight:bold">Ok. And you do agree that ensuring that, it’s backed up automatically in a secure, off site location gives you a piece of mind that your business info is safe? </label>
+                          <div>   
+                              <input id="IAgreed" type="radio" name="content9" ng-model="content10" value="IAgreed"><label for="IAgree">Agree</label>
+                                <br />              
+                              <input id="IDisagreed" type="radio" name="content9" ng-model="content10" value="IDisagreed"><label for="Disagree">No</label>
+                            </div>
                         </form>
                       </div>
 
@@ -108,7 +120,7 @@
                           <div class="validation"></div>
                           <div class="help-block with-errors"></div>
                         </div>
-                        <label style="font-weight:bold">Call back later or the client ain't interested</label>&nbsp;
+                        <label style="font-weight:bold; color:red;">Call back later or the client ain't interested</label>&nbsp;
                      </form>
                       
                     </div>
@@ -163,11 +175,14 @@
                           </select>                    
                         </fieldset>   
                         </br>             
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                           <label style="font-weight:bold">Desposition comments</label>
                           <input type="text" class="form-control" name="comment" id="comment" placeholder="Desposition Comments" data-rule="minlen:8" data-msg="Please enter at least 8 chars of subject" />
+                        </div> -->
+                        <div class="form-group">
+                          <textarea rows="4" cols="50" name="comment"  id="comment" placeholder="Desposition Comments" class="form-control"></textarea>
                         </div>
-                         <div class="form-group">
+                        <div class="form-group">
                             <input type="submit" value="Submit Info" class="btn btn-primary"/>
                           </div>
                       </form>

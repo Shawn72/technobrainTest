@@ -46,13 +46,13 @@
     <section id="services">
       <div class="container">
         <div class="section-header">
-          <h2>Export to Excel</h2>         
+          <h2>Export Feedbacks</h2>         
         </div>
     <div class="row">
          
     <div class="panel">
     <div class="panel-heading">
-      <h3>Export Clients feedbacks into Excel Sheet</h3>
+      <h3>Export Clients feedbacks</h3>
       <div class="panel-body">
         <div class="table-responsive">  
         
@@ -85,9 +85,15 @@
         ?>
         </table>
         <br />
-        <form method="post" action="xPexcel.php">
-            <input type="submit" name="export" class="btn btn-success" value="Export" />
-        </form>
+        
+       
+            <form method="post" action="xPexcel.php">
+            <input type="submit" name="export" class="btn btn-success btn-md" value="Export Excel" />
+            </form>&nbsp;
+            <form action="printToPDF.php" method="post" role="form">
+                <input type="submit" value="Export PDF" class="btn btn-success btn-md"/>
+            </form>
+        
     </div>    				
     		
       </div>
